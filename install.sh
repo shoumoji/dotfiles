@@ -1,20 +1,20 @@
 #!/bin/bash
 
-DOTPATH=~/.dotfiles
+DOTPATH=~/dotfiles
 
 # git が使えるなら git
-if has "git"; then
+if hash "git"; then
     git clone --recursive "$GITHUB_URL" "$DOTPATH"
 
 # 使えない場合は curl か wget を使用する
-elif has "curl" || has "wget"; then
+elif hash "curl" || hash "wget"; then
     tarball="https://github.com/b4b4r07/dotfiles/archive/master.tar.gz"
 
     # どっちかでダウンロードして，tar に流す
-    if has "curl"; then
+    if hash "curl"; then
         curl -L "$tarball"
 
-    elif has "wget"; then
+    elif hash "wget"; then
         wget -O - "$tarball"
 
     fi | tar zxv
@@ -23,12 +23,12 @@ elif has "curl" || has "wget"; then
     mv -f dotfiles-master "$DOTPATH"
 
 else
-    die "curl or wget required"
+    echo "curl or wget required" >&2
 fi
 
-cd ~/.dotfiles
+cd ~/dotfiles
 if [ $? -ne 0 ]; then
-    die "not found: $DOTPATH"
+    echo "not found: $DOTPATH" >&2
 fi
 
 # 移動できたらリンクを実行する
