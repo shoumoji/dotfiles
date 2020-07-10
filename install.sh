@@ -37,7 +37,7 @@ for f in .??*
   do
     # 既に存在しているディレクトリの場合、中身のリンクを貼る
     if [ "$f" = "$HOME/$f" ] && [ -d "$f"]; then
-	for file in $f/.??*
+	for file in "$f"/.??*
 		do
 			ln -snfv "$DOTPATH/$f/$file" "$HOME/$f/$file"
 		done
