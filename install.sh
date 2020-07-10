@@ -36,7 +36,7 @@ fi
 for f in .??*
   do
     # 既に存在しているディレクトリの場合、中身のリンクを貼る
-    if [ -d "$HOME/$f" ]; then
+    if [ -d '$HOME/$f' ]; then
 	for file in "$f"/.??*
 		do
 			ln -snfv "$DOTPATH/$f/$file" "$HOME/$f/$file"
@@ -44,6 +44,6 @@ for f in .??*
     	continue
     fi
 
-    [ "$f" = ".git" ] && continue
+    [ '$f' = '.git' ] && continue
     ln -snfv "$DOTPATH/$f" "$HOME/$f"
   done
