@@ -33,17 +33,19 @@ if [ $? -ne 0 ]; then
 fi
 
 # 移動できたらリンクを実行する
-for f in .??*
+for f in "find .??*"
   do
     # 既に存在しているディレクトリの場合、中身のリンクを貼る
-    if [ -d '$HOME/$f' ]; then
-	for file in "$f"/.??*
-		do
-			ln -snfv "$DOTPATH/$f/$file" "$HOME/$f/$file"
-		done
-    	continue
-    fi
-
+  if [ -d $HOME/$f ]; then
+	cd $f	
+        for file in "find .??*"
+       	do
+       		ln -snfv "$DOTPATH/$f/$file" "$HOME/$f/$file"
+       	done
+	cd ..
+   	continue
+   fi
+ 
     [ "$f" = ".git" ] && continue
     ln -snfv "$DOTPATH/$f" "$HOME/$f"
   done
