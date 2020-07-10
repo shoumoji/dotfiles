@@ -1,6 +1,7 @@
 #!/bin/bash
 
 DOTPATH=~/dotfiles
+GITHUB_URL=https://github.com/shoumoji/dotfiles
 
 # git が使えるなら git
 if hash "git"; then
@@ -8,7 +9,7 @@ if hash "git"; then
 
 # 使えない場合は curl か wget を使用する
 elif hash "curl" || hash "wget"; then
-    tarball="https://github.com/b4b4r07/dotfiles/archive/master.tar.gz"
+    tarball="https://github.com/shoumoji/dotfiles"
 
     # どっちかでダウンロードして，tar に流す
     if hash "curl"; then
@@ -26,7 +27,7 @@ else
     echo "curl or wget required" >&2
 fi
 
-cd ~/dotfiles
+cd $HOME/dotfiles
 if [ $? -ne 0 ]; then
     echo "not found: $DOTPATH" >&2
 fi
@@ -34,7 +35,15 @@ fi
 # 移動できたらリンクを実行する
 for f in .??*
   do
-    [ "$f" = ".git" ] && continue
+    # 既に存在しているディレクトリの場合、中身のリンクを貼る
+    if [ "$f" = "$HOME/$f" ] && [ -d "$f"]; then
+	for file in $f/.??*
+		do
+			ln -snfv "$DOTPATH/$f/$file" "$HOME/$f/$file"
+		done
+    	continue
+    fi
 
+    [ "$f" = ".git" ] && continue
     ln -snfv "$DOTPATH/$f" "$HOME/$f"
   done
