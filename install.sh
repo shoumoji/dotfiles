@@ -44,6 +44,6 @@ for f in .??*
     	continue
     fi
 
-    [ '$f' = '.git' ] && continue
+    [ "$f" = ".git" ] && continue
     ln -snfv "$DOTPATH/$f" "$HOME/$f"
   done
