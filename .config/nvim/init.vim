@@ -44,7 +44,9 @@ let g:clang_cpp_options = '
   \ '
 
 " }}}
-
+"
+" vim-goのバージョン警告を無視
+let g:go_version_warning = 0
 "==========
 "dein.vim
 "==========
