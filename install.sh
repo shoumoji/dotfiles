@@ -35,17 +35,19 @@ fi
 # 移動できたらリンクを実行する
 for f in `find .??*`
   do
-    # 既に存在しているディレクトリの場合、中身のリンクを貼る
-  if [ -d "$HOME"/"$f" ]; then
-	cd $f	
-        for file in `find .??*`
-       	do
-       		ln -snfv "$DOTPATH/$f/$file" "$HOME/$f/$file"
-       	done
-	cd ..
-   	continue
-   fi
- 
+    # .gitは無視
     [ "$f" = ".git" ] && continue
+
+    # 既に存在しているディレクトリの場合、中身のリンクを貼る
+    if [ -d "$HOME"/"$f" ]; then
+      cd $f	
+        for file in `find .??*`
+        	do
+       	  	ln -snfv "$DOTPATH/$f/$file" "$HOME/$f/$file"
+          done
+      cd ..
+     	continue
+    fi
+     
     ln -snfv "$DOTPATH/$f" "$HOME/$f"
   done
