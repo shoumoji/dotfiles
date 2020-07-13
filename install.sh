@@ -36,7 +36,9 @@ fi
 for f in `find .??*`
   do
     # .gitは無視
-    [ "$f" = ".git" ] && continue
+    if [ $f = .git* ]; then
+      continue
+    fi
 
     # 既に存在しているディレクトリの場合、中身のリンクを貼る
     if [ -d "$HOME"/"$f" ]; then
