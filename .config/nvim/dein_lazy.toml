@@ -6,6 +6,12 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'Shougo/deoppet.nvim'
+hook_add = '''
+  source ~/.config/nvim/plugins/deoppet.vim
+'''
+
+[[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
   source ~/.config/nvim/plugins/nerdtree.vim
