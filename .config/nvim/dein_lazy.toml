@@ -6,9 +6,9 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'Shougo/deoppet.nvim'
+repo = 'Shougo/neosnippet.vim'
 hook_add = '''
-  source ~/.config/nvim/plugins/deoppet.nvim
+  source ~/.config/nvim/plugins/neosnippet.vim
 '''
 
 [[plugins]]
