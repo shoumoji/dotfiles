@@ -12,6 +12,9 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
   source ~/.config/nvim/plugins/nerdtree.vim
@@ -45,4 +48,13 @@ hook_add = '''
 [[plugins]]
 repo = 'phpactor/phpactor'
 on_ft = ['php']
-build = 'composer install'
+build = 'composer install --no-dev -o'
+
+[[plugins]]
+repo = 'kristijanhusak/deoplete-phpactor'
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+hook_add = '''
+autocmd FileType html,css,php,jsx EmmetInstall
+'''

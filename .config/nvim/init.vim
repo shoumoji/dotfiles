@@ -4,7 +4,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set splitright
-set clipboard=unnamed
+set clipboard+=unnamedplus
 set hls
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
