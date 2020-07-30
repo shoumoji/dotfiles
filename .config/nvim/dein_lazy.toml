@@ -36,7 +36,7 @@ hook_add = '''
 repo = 'rhysd/vim-clang-format'
 on_ft = ['c','cpp','h']
 hook_add = '''
-autocmd FileType c ClangFormatAutoEnable
+  autocmd FileType c ClangFormatAutoEnable
 '''
 
 [[plugins]]
@@ -57,5 +57,11 @@ on_ft = ['php']
 [[plugins]]
 repo = 'mattn/emmet-vim'
 hook_add = '''
-autocmd FileType html,css,php,jsx EmmetInstall
+  autocmd FileType html,css,php,jsx EmmetInstall
+'''
+
+[[plugins]]
+repo = 'alvan/vim-closetag'
+hook_add = '''
+  source ~/dotfiles/.config/nvim/plugins/vim-closetag
 '''
