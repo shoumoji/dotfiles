@@ -52,6 +52,7 @@ build = 'composer install --no-dev -o'
 
 [[plugins]]
 repo = 'kristijanhusak/deoplete-phpactor'
+on_ft = ['php']
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
