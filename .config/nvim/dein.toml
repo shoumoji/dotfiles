@@ -36,24 +36,3 @@ repo = 'osyo-manga/vim-anzu'
 hook_add = '''
   source ~/.config/nvim/plugins/anzu.vim
 '''
-
-[[plugins]]
-repo = 'justmao945/vim-clang'
-hook_add = '''
-'''
-
-[[plugins]]
-repo = 'billyvg/tigris.nvim'
-hook_add = '''
-'''
-
-[[plugins]]
-repo = 'rhysd/vim-clang-format'
-hook_add = '''
-autocmd FileType c ClangFormatAutoEnable
-'''
-
-[[plugins]]
-repo = 'fatih/vim-go'
-hook_add = '''
-'''
