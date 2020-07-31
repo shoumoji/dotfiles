@@ -1,6 +1,3 @@
-# alias (vi)
-#alias vi='nvim'
-
 # flutter path
 export PATH="$PATH:$HOME/flutter/bin"
 
