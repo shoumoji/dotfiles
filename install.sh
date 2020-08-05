@@ -40,16 +40,16 @@ for f in `find .??*`
       continue
     fi
 
-    # 既に存在しているディレクトリの場合、中身のリンクを貼る
-    if [ -d "$HOME"/"$f" ]; then
-      cd $f	
-        for file in `find .??*`
-        	do
-       	  	ln -snfv "$DOTPATH/$f/$file" "$HOME/$f/$file"
-          done
-      cd ..
-     	continue
-    fi
-     
+ #   # 既に存在しているディレクトリの場合、中身のリンクを貼る
+ #   if [ -d "$HOME"/"$f" ]; then
+ #     cd $f	
+ #       for file in `find .??*`
+ #       	do
+ #      	  	ln -snfv "$DOTPATH/$f/$file" "$HOME/$f/$file"
+ #         done
+ #     cd ..
+ #    	continue
+ #   fi
+ #    
     ln -snfv "$DOTPATH/$f" "$HOME/$f"
   done
