@@ -63,5 +63,5 @@ hook_add = '''
 [[plugins]]
 repo = 'alvan/vim-closetag'
 hook_add = '''
-  source ~/dotfiles/.config/nvim/plugins/vim-closetag
+  source ~/.config/nvim/plugins/vim-closetag.vim
 '''

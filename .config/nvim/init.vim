@@ -34,9 +34,9 @@ inoremap <C-A> <Right>
 inoremap <C-f><C-f> <ESC><S-a>
 
 "閉じカッコ補完
-inoremap {<Enter> {}<Left><CR><ESC><S-o>
-inoremap [<Enter> []<Left><CR><ESC><S-o>
-inoremap (<Enter> ()<Left><CR><ESC><S-o>
+"inoremap {<Enter> {}<Left><CR><ESC><S-o>
+"inoremap [<Enter> []<Left><CR><ESC><S-o>
+"inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 " Insert Mode jjでノーマルモードへ
 inoremap <silent> jj <ESC>:<C-u>w<CR>

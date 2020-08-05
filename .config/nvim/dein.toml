@@ -36,3 +36,6 @@ repo = 'osyo-manga/vim-anzu'
 hook_add = '''
   source ~/.config/nvim/plugins/anzu.vim
 '''
+
+[[plugins]]
+repo = 'wsdjeg/dein-ui.vim'
