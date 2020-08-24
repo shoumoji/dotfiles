@@ -17,12 +17,14 @@ set hls
 call plug#begin()
 Plug 'tpope/vim-endwise'
 Plug 'joshdick/onedark.vim'
-Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 filetype plugin indent on
