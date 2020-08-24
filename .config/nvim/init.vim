@@ -17,12 +17,9 @@ set hls
 call plug#begin()
 Plug 'tpope/vim-endwise'
 Plug 'joshdick/onedark.vim'
-colorscheme onedark
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
-source ~/.config/nvim/plugins/gitgutter.vim
 Plug 'tpope/vim-fugitive'
-source ~/.config/nvim/plugins/fugitive.vim
 Plug 'itchyny/lightline.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
@@ -30,6 +27,7 @@ call plug#end()
 
 filetype plugin indent on
 syntax on
+colorscheme onedark
 
 "インサートモードのままカーソル移動
 inoremap <C-A> <Right>
