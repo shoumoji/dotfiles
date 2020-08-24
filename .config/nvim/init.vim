@@ -29,6 +29,12 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mattn/vim-lsp-icons'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
+
+" LSP Lint関連
+Plug 'Shougo/neosnippet.vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'thomasfaingnaert/vim-lsp-snippets'
+Plug 'thomasfaingnaert/vim-lsp-neosnippet'
 " LSP関連終了
 call plug#end()
 
