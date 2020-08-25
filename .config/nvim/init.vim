@@ -31,11 +31,11 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 " LSP関連終了
 call plug#end()
-
 filetype plugin indent on
-syntax on
+syntax enable
 colorscheme onedark
-
+" asyncompleteのTab補完
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 
 "vimLSP関連の設定
 if empty(globpath(&rtp, 'autoload/lsp.vim'))
@@ -58,9 +58,7 @@ command! LspDebug let lsp_log_verbose=1 | let lsp_log_file = expand('~/lsp.log')
 
 let g:lsp_diagnostics_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
-let g:asyncomplete_auto_popup = 1
-let g:asyncomplete_auto_completeopt = 0
-let g:asyncomplete_popup_delay = 200
+let g:asyncomplete_auto_popup = 100
 let g:lsp_text_edit_enabled = 1
 
 
