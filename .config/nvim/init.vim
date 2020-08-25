@@ -29,6 +29,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mattn/vim-lsp-icons'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
+" goの自動整形
+Plug 'mattn/vim-goimports'
 " LSP関連終了
 call plug#end()
 filetype plugin indent on
