@@ -20,6 +20,8 @@ Plug 'joshdick/onedark.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
+Plug 'alvan/vim-closetag'
+Plug 'skanehira/code2img.vim'
 " LSP関連
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
