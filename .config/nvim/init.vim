@@ -34,9 +34,11 @@ Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'mattn/vim-goimports'
 " LSP関連終了
 call plug#end()
+
 filetype plugin indent on
 syntax enable
 colorscheme onedark
+
 " asyncompleteのTab補完
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 
@@ -61,9 +63,14 @@ command! LspDebug let lsp_log_verbose=1 | let lsp_log_file = expand('~/lsp.log')
 
 let g:lsp_diagnostics_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
-let g:asyncomplete_auto_popup = 100
 let g:lsp_text_edit_enabled = 1
 
+" 保存時にLSPの自動整形
+autocmd BufWritePre <buffer> LspDocumentFormat
+
+" close tagの設定
+let g:closetag_filetypes = 'html,xhtml,phtml,javascript,typescript,php'
+let g:closetag_close_shortcut = '<leader>>'
 
 "キーバインド
 
