@@ -6,4 +6,6 @@
 /.config/*/*
 !/.config/nvim/init.vim
 !/.config/fish/config.fish
-!/.config/VSCodium/setting.json
+!.config/VSCodium/User
+.config/VSCodium/User/*
+!/.config/VSCodium/User/setting.json
