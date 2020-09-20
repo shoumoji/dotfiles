@@ -1,14 +1,12 @@
+*/*
+*/*/*
+
 !bin/
 !.bashrc
 !.gitignore
 !README.md
 
-!.config
-!.config/nvim/
 !init.vim
 !config.fish
 !setting.json
-
-# 明示的にgitで管理するファイルを指定する
-*
 
