@@ -1,12 +1,11 @@
-*/*
-*/*/*
+*
 
 !bin/
 !.bashrc
 !.gitignore
 !README.md
 
-!init.vim
-!config.fish
-!setting.json
+!/.config/nvim/init.vim
+!/.config/fish/config.fish
+!/.config/VSCodium/setting.json
 
