@@ -1,4 +1,4 @@
-*
+*/*
 
 !bin/
 !.bashrc
@@ -8,4 +8,3 @@
 !/.config/nvim/init.vim
 !/.config/fish/config.fish
 !/.config/VSCodium/setting.json
-
