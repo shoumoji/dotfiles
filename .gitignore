@@ -6,6 +6,6 @@
 !.gitignore
 !README.md
 
-!.config/nvim/init.vim
-!.config/fish/config.fish
-!.config/VSCodium/User/setting.json
+!init.vim
+!config.fish
+!setting.json
