@@ -1,0 +1,11 @@
+# 明示的にgitで管理するファイルを指定する
+*
+
+!bin/
+!.bashrc
+!.gitignore
+!README.md
+
+!.config/nvim/init.vim
+!.config/fish/config.fish
+!.config/VSCodium/User/setting.json
