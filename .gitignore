@@ -1,11 +1,9 @@
-!bin/
-!.bashrc
-!.gitignore
-!README.md
-
 /.config/*/*
+
 !/.config/nvim/init.vim
+
 !/.config/fish/config.fish
+
 !.config/VSCodium/User
 .config/VSCodium/User/*
-!/.config/VSCodium/User/setting.json
+!/.config/VSCodium/User/settings.json

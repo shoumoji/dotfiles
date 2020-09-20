@@ -1,0 +1,21 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.startupEditor": "newUntitledFile",
+    "[css]": {
+        "editor.tabSize": 2,
+    },
+    "[html]": {
+        "editor.suggest.insertMode": "replace",
+    },
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "editor.tabSize": 2,
+    },
+    "[ejs]": {
+        "editor.tabSize": 2,
+    }
+}
