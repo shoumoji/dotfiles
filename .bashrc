@@ -1,6 +1,3 @@
-# flutter path
-export PATH="$PATH:$HOME/flutter/bin"
-
 # env
 # export XDG_CONFIG_HOME='~/.confh  /home/shoumojishoumoji@shoumoji-MS-7816 g'
 

@@ -76,7 +76,8 @@ autocmd BufWritePre <buffer> LspDocumentFormatSync
 let g:closetag_filetypes = 'html,xhtml,phtml,javascript,typescript,php'
 let g:closetag_close_shortcut = '<leader>>'
 
-"キーバインド
+" Makefileではtab文字を使う
+autocmd FileType make set noexpandtab shiftwidth=4 softtabstop=4
 
 " Insert Mode jjでノーマルモードへ
 inoremap <silent> jj <ESC>:<C-u>w<CR>
