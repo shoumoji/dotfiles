@@ -64,16 +64,21 @@ command! LspDebug let lsp_log_verbose=1 | let lsp_log_file = expand('~/lsp.log')
 
 let g:lsp_diagnostics_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
+let g:asyncomplete_auto_popup = 1
+let g:asyncomplete_popup_delay = 200
 let g:lsp_text_edit_enabled = 1
+" エラー表示を無効に
+let g:lsp_virtual_text_enabled = 0
 
 " 保存時にLSPの自動整形
-autocmd BufWritePre <buffer> LspDocumentFormat
+autocmd BufWritePre <buffer> LspDocumentFormatSync
 
 " close tagの設定
 let g:closetag_filetypes = 'html,xhtml,phtml,javascript,typescript,php'
 let g:closetag_close_shortcut = '<leader>>'
 
-"キーバインド
+" Makefileではtab文字を使う
+autocmd FileType make set noexpandtab shiftwidth=4 softtabstop=4
 
 " Insert Mode jjでノーマルモードへ
 inoremap <silent> jj <ESC>:<C-u>w<CR>

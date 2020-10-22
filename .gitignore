@@ -1,1 +1,9 @@
-.config/nvim/plugged/
+/.config/*/*
+
+!/.config/nvim/init.vim
+
+!/.config/fish/config.fish
+
+!.config/VSCodium/User
+.config/VSCodium/User/*
+!/.config/VSCodium/User/settings.json
