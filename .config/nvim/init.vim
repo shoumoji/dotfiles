@@ -87,7 +87,6 @@ smap <expr> <C-p> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<C-p>'
 
 " texの自動ビルド
 augroup auto_tex_build
-  autocmd!
   autocmd FileType tex
-    \ autocmd BufWritePost <buffer> LspDocumentBuild
+    \ autocmd! auto_tex_build BufWritePost <buffer> LspDocumentBuild
 augroup END
