@@ -1,0 +1,17 @@
+{
+  "texinit": {
+		"prefix": "Init",
+		"body": [
+			"\\documentclass[autodetect-engine,dvipdfmx-if-dvi,ja=standard,a4paper,12pt]{bxjsarticle}",
+			"\\begin{document}",
+			"\\title{$1レポート}",
+			"\\author{$2}",
+			"\\maketitle",
+			"",
+			"\\section{$3}",
+			"$0",
+			"\\end{document}"
+		],
+		"description": "texの初期状態"	
+	}
+}

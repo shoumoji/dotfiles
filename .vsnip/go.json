@@ -1,0 +1,39 @@
+{
+  
+  "goinit": {
+    "prefix": "Init",
+    "description": "goの初期状態",
+    "body": [
+      "package $1",
+      "",
+      "import(",
+      "  \"$2\"",
+      ")",
+      "",
+      "func $3($4){",
+      "  $0",
+      "}"
+    ]
+  },
+
+  "function": {
+    "prefix": "Func",
+    "description": "関数作成",
+    "body": [
+      "func $1($2) {",
+      "  $0",
+      "}"
+    ]
+  },
+
+  "import": {
+    "prefix": "Import",
+    "description": "import部分",
+    "body": [
+      "import (",
+      "  $0",
+      ")"
+    ]
+  }
+
+}
