@@ -1,13 +1,12 @@
 #!/bin/bash
 
-cd $HOME/dotfiles
+DOTPATH=$HOME/dotfiles
 
 
-# 移動できたらリンクを実行する
 for f in `find .??*`
 do
-  # .gitは無視
-  if [ $f = .git* ]; then
+  # .git関係は無視
+  if [ $f = .git || $f = .gitignore ]; then
     continue
   fi
 
