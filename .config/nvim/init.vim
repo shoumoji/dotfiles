@@ -20,7 +20,6 @@ Plug 'joshdick/onedark.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
-Plug 'alvan/vim-closetag'
 Plug 'editorconfig/editorconfig-vim'
 " LSP関連
 Plug 'prabirshrestha/vim-lsp'
@@ -73,10 +72,6 @@ let g:lsp_virtual_text_enabled = 0
 " 保存時にLSPの自動整形
 autocmd BufWritePre <buffer> LspDocumentFormatSync
 
-" close tagの設定
-let g:closetag_filetypes = 'html,xhtml,phtml,javascript,typescript,php'
-let g:closetag_close_shortcut = '<leader>>'
-
 " Makefileではtab文字を使う
 autocmd FileType make set noexpandtab shiftwidth=4 softtabstop=4
 
@@ -85,7 +80,13 @@ inoremap <silent> jj <ESC>:<C-u>w<CR>
 
 " vsnipの移動
 " Jump forward or backward
-imap <expr> <C-n>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<C-n>'
-smap <expr> <C-n>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<C-n>'
+imap <expr> <C-n> vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<C-n>'
+smap <expr> <C-n> vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<C-n>'
 imap <expr> <C-p> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<C-p>'
 smap <expr> <C-p> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<C-p>'
+
+" texの自動ビルド
+augroup auto_tex_build
+  autocmd!
+  autocmd BufWritePost *.tex LspDocumentBuild
+augroup END
