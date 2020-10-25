@@ -1,0 +1,11 @@
+{
+  "jsinit": {
+    "prefix": "Init",
+    "description": "javascriptの初期状態",
+    "body": [
+      "'use strict';",
+      "",
+      "$0"
+    ]
+  }
+}
