@@ -1,6 +1,3 @@
-# env
-# export XDG_CONFIG_HOME='~/.confh  /home/shoumojishoumoji@shoumoji-MS-7816 g'
-
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
