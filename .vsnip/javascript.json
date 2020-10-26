@@ -7,5 +7,16 @@
       "",
       "$0"
     ]
+  },
+
+  "ConstructorReact": {
+    "prefix": "ConstructorReact",
+    "description": "Reactのコンストラクタ用",
+    "body": [
+      "constructor(props){",
+      "  super(props);",
+      "  $0",
+      "}"
+    ]
   }
 }
