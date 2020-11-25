@@ -13,7 +13,7 @@
     "prefix": "ConstructorReact",
     "description": "Reactのコンストラクタ用",
     "body": [
-      "constructor(props){",
+      "constructor(props) {",
       "  super(props);",
       "  $0",
       "}"
