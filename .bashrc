@@ -116,5 +116,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# default use fish
-exec fish
+#show git branch
+source /usr/local/bin/git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=true
+export PS1='\[\e[0;32m\]\u\[\e[m\]@\h \[\e[0;32m\]\w\[\e[m\] $(__git_ps1 "(%s)")\$ '
+
+#enable nvm
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
